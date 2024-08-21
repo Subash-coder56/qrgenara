@@ -1,55 +1,110 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
 }
 
-body {
-    background-color: aqua;
-}
-
-.container {
-    width: 400px;
-    padding: 25px 35px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    border-radius: 10px;
-}
-
-.container p {
-    font-weight: 600;
-    font-size: 25px;
-    margin-bottom: 8px;
-}
-
-.container input {
+/* Hero Section */
+.hero {
     width: 100%;
-    border: 1px solid #ccc; /* Added a color for better visibility */
-    outline: 0;
-    padding: 10px;
-    margin: 10px 0 20px;
-    border-radius: 5px;
-}
-
-.container button {
-    width: 100%;
-    height: 50px;
-    background: blue;
-    color: #fff; /* Changed to white for better contrast */
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 255, 0.3); /* Fixed box-shadow property */
-    cursor: pointer;
-    font-weight: 500;
-    margin: 20px 0;
-    font-size: 25px;
-}
-img{
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(240, 79, 199), blue);
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    text-align: center; /* Center text for better alignment */
+    color: #fff; /* Ensure text color is specified */
+    padding: 0 20px; /* Add padding for better spacing */
+}
+
+h1 {
+    font-size: 3rem; /* Use rem for scalability */
+    font-weight: 400;
+    margin-bottom: 2rem; /* Adjust margin for better spacing */
+}
+
+span {
+    color: red;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    max-width: 600px; /* Ensure it doesn't stretch too wide */
+    height: 250px;
+    background: #303d84;
+    color: #fff;
+    font-size: 1rem; /* Use rem for scalability */
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 2rem; /* Adjust margin for better spacing */
+}
+
+textarea::placeholder {
+    font-size: 1.75rem; /* Use rem for scalability */
+    color: #fff;
+}
+
+/* Row */
+.row {
+    width: 100%;
+    max-width: 600px; /* Ensure it doesn't stretch too wide */
+    display: flex; /* Ensure row layout */
+    gap: 20px;
+    margin-bottom: 2rem; /* Adjust margin for better spacing */
+}
+
+/* Buttons and Select */
+button, select {
+    background: #ff2963;
+    color: #fff;
+    font-size: 1.5rem; /* Use rem for scalability */
+    padding: 10px 20px; /* Adjust padding for a more consistent look */
+    border-radius: 35px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+button:hover, select:hover {
+    background: #e51d5b; /* Slightly darker color on hover */
+}
+
+select {
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 10px center; /* Adjust background position */
+    padding-right: 40px; /* Ensure text does not overlap with arrow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    textarea {
+        width: 100%;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .row {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    button, select {
+        font-size: 1.25rem; /* Adjust font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for better fit */
+    }
 }
